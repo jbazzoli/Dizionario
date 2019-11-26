@@ -1,0 +1,25 @@
+@model NeperiaDizionarioV2.Models.Sinonimo
+@{
+    ViewData["Title"] = "Lista di Parole";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Nuova Sinonimo!!</h1>
+ @using (Html.BeginForm())
+{ 
+   <label>Sinonimo</label> 
+  @Html.EditorFor(model => model.Termo, new { htmlAttributes = new { @class = "form-control" } })
+  
+  <label>Sinonimo di che parola</label> 
+  <select asp-for="ParolaId" asp-items="ViewBag.ParolaId" class="form-control"></select>
+  <div class="form-group">
+            <div >
+                <input type="submit" value="Save" class="btn btn-success"/>|
+
+                <a asp-action="index"  class="btn btn-primary" >Ritorne</a> 
+            </div>
+    </div>
+    
+ }
+   
+ </div>

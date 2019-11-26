@@ -1,0 +1,40 @@
+﻿@model IEnumerable<NeperiaDizionarioV2.Models.Elabor>
+
+
+
+@{
+    ViewData["Title"] = "Lista di Archivi";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Lista di Archivi!!</h1>
+   
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Id</th>
+      <th scope="col">Data</th>
+      <th scope="col">Quantità </th>
+      <th scope="col">Peso </th>
+     <th scope="col">Nome del Archivo </th>
+    </tr>
+  </thead>
+  <tbody>
+           
+      @foreach (var item in Model) {
+    <tr>
+      <th scope="row"></th>
+      <td> @Html.DisplayFor(modelItem => item.Id)</td>
+      <td> @Html.DisplayFor(modelItem => item.DataStart)</td>
+      <td> @Html.DisplayFor(modelItem => item.Count)</td>
+      <td>@Html.DisplayFor(modelItem => item.Weight)</td>
+      <td> @Html.DisplayFor(modelItem => item.NameFile)</td>
+     
+    </tr>
+    }
+  </tbody>
+</table>
+    
+</div>

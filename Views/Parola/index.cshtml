@@ -1,0 +1,43 @@
+@model IEnumerable<NeperiaDizionarioV2.Models.Parola>
+@{
+    ViewData["Title"] = "Lista di Parole";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Lista di Parole!!</h1>
+   
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Id</th>
+      <th scope="col">Termini</th>
+       <th scope="col">Peso </th>
+     
+    </tr>
+  </thead>
+  <tbody>
+            <tr>
+                <td>
+                    <a asp-action="New" class="btn btn-success">Nuovo</a>
+                </td>
+            </tr>
+      @foreach (var item in Model) {
+    <tr>
+      <th scope="row"></th>
+      <td> @Html.DisplayFor(modelItem => item.Id)</td>
+      <td> @Html.DisplayFor(modelItem => item.Termo)</td>
+      <td> @Html.DisplayFor(modelItem => item.Peso)</td>
+      
+      <td>
+            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning" >Edit</a> |
+               
+            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+       </td>
+    </tr>
+    }
+  </tbody>
+</table>
+    
+</div>

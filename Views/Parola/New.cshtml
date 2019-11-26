@@ -1,0 +1,22 @@
+@model NeperiaDizionarioV2.Models.Parola
+@{
+    ViewData["Title"] = "Lista di Parole";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Nuova Parola!!</h1>
+ @using (Html.BeginForm())
+{ 
+  @Html.EditorFor(model => model.Termo, new { htmlAttributes = new { @class = "form-control" } })
+  @Html.EditorFor(model => model.Peso, new { htmlAttributes = new { @class = "form-control" } })
+  <div class="form-group">
+            <div >
+                <input type="submit" value="Save" class="btn btn-success"/>|
+
+                <a asp-action="index"  class="btn btn-primary" >Ritorne</a> 
+            </div>
+    </div>
+    
+ }
+   
+ </div>

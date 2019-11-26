@@ -1,0 +1,22 @@
+@model NeperiaDizionarioV2.Models.Parola
+@{
+    ViewData["Title"] = "Lista di Parole";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Cancelamento di Parola !!</h1>
+ @using (Html.BeginForm())
+{ 
+   @Html.EditorFor(model => model.Termo, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
+  <div class="form-group">
+            <div >
+                <input type="submit" value="Deletar" class="btn btn-warning" />
+                |
+
+                <a asp-action="index"  class="btn btn-primary" >Ritorne</a> 
+            </div>
+    </div>
+    
+ }
+   
+ </div>
