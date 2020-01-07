@@ -7,21 +7,17 @@
     <h1 class="display-4">Lista di Sinonimo!!</h1>
    
 
-<table class="table table-striped">
+<table id="sinomimo" class="table table-striped">
   <thead>
     <tr>
       <th scope="col">#</th>
       <th scope="col">Id</th>
       <th scope="col">Termini</th>
-      
+      <th><a asp-action="New" class="btn btn-success">Nuovo</a></th>
     </tr>
   </thead>
   <tbody>
-            <tr>
-                <td>
-                    <a asp-action="New" class="btn btn-success">Nuovo</a>
-                </td>
-            </tr>
+           
       @foreach (var item in Model) {
     <tr>
       <th scope="row"></th>
@@ -39,3 +35,12 @@
 </table>
     
 </div>
+@section Scripts {
+	<!-- For the DataTables grid -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+	<!-- Page-specific script -->
+	<script src="~/js/MY-CONTROLLER_MY-PAGE.js" asp-append-version="true"></script>
+
+}
