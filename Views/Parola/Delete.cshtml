@@ -10,10 +10,10 @@
    @Html.EditorFor(model => model.Termo, new { htmlAttributes = new { @class = "form-control", @disabled = "disabled" } })
   <div class="form-group">
             <div >
-                <input type="submit" value="Deletar" class="btn btn-warning" />
-                |
-
-                <a asp-action="index"  class="btn btn-primary" >Ritorne</a> 
+                
+                <button type="submit" value="Deletar" class="btn btn-warning" > <i class="fa fa-trash" aria-hidden="true"></i> </button>
+               | <a asp-action="index"  class="btn btn-primary" ><i class="fa fa-undo" aria-hidden="true"></i></a> 
+               
             </div>
     </div>
     

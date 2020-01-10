@@ -10,7 +10,7 @@
     <h1 class="display-4">Lista di Archivi!!</h1>
    
 
-<table class="table table-striped">
+<table id="fileDataTable" class="table table-striped">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -38,3 +38,13 @@
 </table>
     
 </div>
+
+@section Scripts {
+	<!-- For the DataTables grid -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+	<!-- Page-specific script -->
+	<script src="~/js/MY-CONTROLLER_MY-PAGE.js" asp-append-version="true"></script>
+
+}

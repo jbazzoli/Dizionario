@@ -13,7 +13,7 @@
       <th scope="col">#</th>
       <th scope="col">Id</th>
       <th scope="col">Termini</th>
-      <th><a asp-action="New" class="btn btn-success">Nuovo</a></th>
+       <th><a asp-action="New" class="btn btn-success"><i class="fa fa-fw fa-plus" aria-hidden="true"></i></a></a></th>
     </tr>
   </thead>
   <tbody>
@@ -25,9 +25,9 @@
       <td> @Html.DisplayFor(modelItem => item.Termo)</td>
       
       <td>
-            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning" >Edit</a> |
+            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning" > <i class="fa fa-edit" aria-hidden="true"></i></a> |
                
-            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></a>
        </td>
     </tr>
     }
